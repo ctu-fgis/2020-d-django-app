@@ -1,0 +1,207 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from django.db import models
+
+
+class Dkraje(models.Model):
+    dch1 = models.BigIntegerField()
+    dch2 = models.BigIntegerField()
+    dch3 = models.BigIntegerField()
+    dch4 = models.BigIntegerField()
+    dch5 = models.BigIntegerField()
+    dch6 = models.BigIntegerField()
+    dch7 = models.BigIntegerField()
+    dch8 = models.BigIntegerField()
+    dch9 = models.BigIntegerField()
+    dch10 = models.BigIntegerField()
+    dch11 = models.BigIntegerField()
+    dch12 = models.BigIntegerField()
+    dch13 = models.BigIntegerField()
+    dch14 = models.BigIntegerField()
+
+    class Meta:
+        managed = False
+        db_table = 'dkraje'
+
+
+class Iautorsky(models.Model):
+    jmeno = models.TextField(primary_key=True)
+    vyzkum = models.BooleanField()
+    teren = models.BooleanField()
+    technicky = models.BooleanField()
+    kreslil = models.BooleanField()
+    fotografoval = models.BooleanField()
+    cislo_nove = models.TextField()
+
+
+    class Meta:
+        managed = False
+        db_table = 'iautorsky'
+    
+    def __str__(self):
+        return self.jmeno
+
+
+class Iautorsky2(models.Model):
+    jmeno = models.TextField()
+    kraj = models.TextField()
+    okres = models.TextField()
+    lokalita = models.TextField()
+    cp = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'iautorsky2'
+
+
+class Ijmeno(models.Model):
+    jmeno = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'ijmeno'
+
+
+class Ikraj(models.Model):
+    kraj = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'ikraj'
+
+
+class Ilokalita(models.Model):
+    lokalita = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'ilokalita'
+
+
+class Imistni(models.Model):
+    lok = models.TextField()
+    kraj = models.TextField()
+    okres = models.TextField()
+    lokalita = models.TextField()
+    cp = models.TextField()
+    cislo_nove = models.TextField()
+    cislo_stare = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'imistni'
+
+
+class Iokres(models.Model):
+    okres = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'iokres'
+
+
+class Itrid1(models.Model):
+    popis1 = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'itrid1'
+
+
+class Itrid2(models.Model):
+    popis2 = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'itrid2'
+
+
+class Itrid3(models.Model):
+    popis3 = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'itrid3'
+
+
+class Itrid4(models.Model):
+    popis4 = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'itrid4'
+
+
+class Itrid5(models.Model):
+    popis5 = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'itrid5'
+
+
+class NsfoxkamPlan(models.Model):
+    inv_cis_stare = models.TextField()
+    inv_cis_nove = models.TextField()
+    lokalita = models.TextField()
+    cp = models.TextField()
+    kraj = models.TextField()
+    okres = models.TextField()
+    tridici1kat = models.TextField()
+    tridici2kat = models.TextField()
+    tridici3kat = models.TextField()
+    tridici4kat = models.TextField()
+    tridici5kat = models.TextField()
+    zamereni = models.TextField()
+    vyzkum = models.TextField()
+    teren = models.TextField()
+    technicky = models.TextField()
+    kreslil = models.TextField()
+    fotografoval = models.TextField()
+    rozsah = models.TextField()
+    soubor = models.TextField()
+    gps = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'nsfoxkam_plan'
+
+
+class Table16(models.Model):
+    col_1 = models.CharField(db_column='COL 1', max_length=6, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_2 = models.IntegerField(db_column='COL 2', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_3 = models.CharField(db_column='COL 3', max_length=26, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_4 = models.CharField(db_column='COL 4', max_length=2, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_5 = models.CharField(db_column='COL 5', max_length=14, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_6 = models.CharField(db_column='COL 6', max_length=15, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_7 = models.CharField(db_column='COL 7', max_length=12, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_8 = models.CharField(db_column='COL 8', max_length=27, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_9 = models.CharField(db_column='COL 9', max_length=12, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_10 = models.CharField(db_column='COL 10', max_length=13, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_11 = models.CharField(db_column='COL 11', max_length=6, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_12 = models.CharField(db_column='COL 12', max_length=54, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_13 = models.CharField(db_column='COL 13', max_length=23, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_14 = models.CharField(db_column='COL 14', max_length=23, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_15 = models.CharField(db_column='COL 15', max_length=23, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_16 = models.CharField(db_column='COL 16', max_length=23, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_17 = models.CharField(db_column='COL 17', max_length=23, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_18 = models.CharField(db_column='COL 18', max_length=91, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_19 = models.CharField(db_column='COL 19', max_length=17, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    col_20 = models.CharField(db_column='COL 20', max_length=29, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+
+    class Meta:
+        managed = False
+        db_table = 'table 16'
+
+
+class Zzz(models.Model):
+    zb = models.DecimalField(max_digits=65535, decimal_places=65535)
+
+    class Meta:
+        managed = False
+        db_table = 'zzz'

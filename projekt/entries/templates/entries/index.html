@@ -1,0 +1,17 @@
+{% block title %}
+<title>Aplikace</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+{% for Iautorsky in entries %}
+<p>{{ Iautorsky.jmeno }}
+{{ Iautorsky.vyzkum }}
+{{ Iautorsky.teren }}
+{{ Iautorsky.technicky }}
+{{ Iautorsky.kreslil }}
+{{ Iautorsky.fotografoval }}
+{{ Iautorsky.cislo_nove }}
+{% endfor %}
+</div>
+{% endblock %}
