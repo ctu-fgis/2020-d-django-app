@@ -29,16 +29,17 @@
                         <a href="#">Add new entry</a>
                     </div>
                 </div>
+                
             </article>
 
 
-            {% for entries in Iautorsky %}
+            {% for Iautorsky in entries %}
 
             <article class="media">
                 <div class="media-content">
                     <div class="content">
                         <p>
-                            <br> {{ entries.jmeno }}
+                            <br> {{ Iautorsky.jmeno }}
                         </p>
                     </div>
                 </div>
@@ -55,3 +56,40 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+/////////////////////////////
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Videos</title>
+</head>
+<body>
+
+
+
+<h1>List of Videos</h1>
+<table border="1" width="1">
+<tr>
+
+</tr>
+
+{% for jmeno in entries %}
+<tr>
+<td>{{ Iautorsky.jmeno }}</td>
+
+</td>
+</tr>
+{% endfor %}
+</table>
+
+
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
