@@ -1,0 +1,7 @@
+<select name="platforma" size="1">
+    {% for results in Iautorsky %}
+    <option value="win">{{ results.jmeno }},{{ results.cislo_nove }} </option>
+        {% endfor %}
+    </select>
+
+    <a href="{% url 'delete_autor' %}"><button type="button" class="btn btn-default">smazat autora</button></a>
