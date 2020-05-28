@@ -11,7 +11,7 @@
 </form>
 {% if user.is_authenticated %}
 
-  <a href="{% url 'delete' %}"><button type="button" class="btn btn-default">smazat data</button></a>
+  <a href="{% url 'delete' %}"><button type="button" class="btn btn-default">editovat</button></a>
   <p></p>
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
