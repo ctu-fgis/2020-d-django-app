@@ -1,4 +1,4 @@
-from django.shortcuts import render 
+from django.shortcuts import render, redirect
 from .models import Iautorsky
 
 def index(request):
@@ -18,14 +18,19 @@ def login(request):
     return render(request, 'entries/login.html')
 
 def delete(request):
-    results=Iautorsky.objects.all()
-    return render(request, 'entries/delete.html',{"Iautorsky":results})
+    entries = Iautorsky.objects.all()
 
-def delete_autor(request, pk):
-    obj = Iautorsky.objects.get(id=pk)
-    if request.method == 'GET':
-        obj.delete()
-        return redirect('/')
+    context = {'entries' : entries}
+
+    return render(request, 'entries/delete.html', context)
+
+
+def delete_autor(request):
+
+
+
+
+    
     return render(request, 'entries/report_smazani.html')
 
 def domu(request):

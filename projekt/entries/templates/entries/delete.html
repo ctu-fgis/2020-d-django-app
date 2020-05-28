@@ -1,7 +1,39 @@
-<select name="platforma" size="1">
-    {% for results in Iautorsky %}
-    <option value="win">{{ results.jmeno }},{{ results.cislo_nove }} </option>
-        {% endfor %}
-    </select>
 
-    <a href="{% url 'delete_autor' %}"><button type="button" class="btn btn-default">smazat autora</button></a>
+{% block body %}
+<!-- i=0
+-->
+<table class='table'>
+    <thead>
+      <tr>
+        <th>jmeno</th>
+        <th>vyzkum</th>
+        <th>teren</th>
+        <th>technicky</th>
+        <th>kreslil</th>
+        <th>fotografoval</th>
+        <th>cislo_nove</th>
+      </tr>
+    </thead>
+{% for Iautorsky in entries %}
+<tr>
+<td>{{ Iautorsky.jmeno }}</td>
+<td>{{ Iautorsky.vyzkum }}</td>
+<td>{{ Iautorsky.teren }}</td>
+<td>{{ Iautorsky.technicky }}</td>
+<td>{{ Iautorsky.kreslil }}</td>
+<td>{{ Iautorsky.fotografoval }}</td>
+<td>{{ Iautorsky.cislo_nove }}</td>
+<!-- i=i+1
+-->
+<td><a href="/edit/{{ i }}"><button type="button" class="btn btn-success">Edit</button></a></td>
+<td><a href="/delete_autor/{{ i }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+
+</tr>
+{% endfor %}
+</table>
+
+
+{% endblock %}
+
+
+
