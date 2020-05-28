@@ -1,5 +1,7 @@
-from django.shortcuts import render 
+from django.shortcuts import render
+from django.shortcuts import redirect
 from .models import Iautorsky
+
 
 def index(request):
     return render(request, 'entries/index.html')
@@ -9,7 +11,7 @@ def add(request):
 
 def data(request):
     entries = Iautorsky.objects.all()
-    
+
     context = {'entries' : entries}
 
     return render(request, 'entries/data.html', context)
