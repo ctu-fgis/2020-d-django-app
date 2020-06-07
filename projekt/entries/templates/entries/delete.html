@@ -12,6 +12,7 @@
         <th>kreslil</th>
         <th>fotografoval</th>
         <th>cislo_nove</th>
+        <th>id</th>
       </tr>
     </thead>
 {% for Iautorsky in entries %}
@@ -23,10 +24,11 @@
 <td>{{ Iautorsky.kreslil }}</td>
 <td>{{ Iautorsky.fotografoval }}</td>
 <td>{{ Iautorsky.cislo_nove }}</td>
+<td>{{ Iautorsky.id }}</td>
 <!-- i=i+1
 -->
 <td><a href="/edit/{{ i }}"><button type="button" class="btn btn-success">Edit</button></a></td>
-<td><a href="/delete_autor/{{ i }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+<td><a href="/delete_autor/{{ Iautorsky.id }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
 
 </tr>
 {% endfor %}
