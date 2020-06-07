@@ -1,7 +1,6 @@
 
 {% block body %}
-<!-- i=0
--->
+
 <table class='table'>
     <thead>
       <tr>
@@ -25,9 +24,8 @@
 <td>{{ Iautorsky.fotografoval }}</td>
 <td>{{ Iautorsky.cislo_nove }}</td>
 <td>{{ Iautorsky.id }}</td>
-<!-- i=i+1
--->
-<td><a href="/edit/{{ i }}"><button type="button" class="btn btn-success">Edit</button></a></td>
+
+<td><a href="/edit/{{ Iautorsky.id }}"><button type="button" class="btn btn-default">Edit</button></a></td>
 <td><a href="/delete_autor/{{ Iautorsky.id }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
 
 </tr>

@@ -13,6 +13,8 @@
 
   <a href="{% url 'delete' %}"><button type="button" class="btn btn-default">editovat</button></a>
   <p></p>
+  <a href="{% url 'add' %}"><button type="button" class="btn btn-default">přidat data</button></a>
+  <p></p>
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>Nejste přihlášen, můžete jen prohlížet data. </p>

@@ -1,0 +1,34 @@
+
+{% block body %}
+Přidat položku do databáze:
+<table>
+    <tr><td>Jméno autora:</td><td><input type="text" name="jmeno_n"></td></tr>
+    <tr><td>Výzkum:</td><td><select name="vyzkum_n" size="1">
+        <option value="True">True
+        <option value="False">False
+        </select></td></tr>
+    <tr><td>Terén:</td><td><select name="teren_n" size="1">
+        <option value="True">True
+        <option value="False">False
+        </select></td></tr></td></tr>
+    <tr><td>Technicky:</td><td><select name="technicky_n" size="1">
+        <option value="True">True
+        <option value="False">False
+        </select></td></tr></td></tr>
+    <tr><td>Kreslil:</td><td><select name="kreslil_n" size="1">
+        <option value="True">True
+        <option value="False">False
+        </select></td></tr></td></tr>
+    <tr><td>Fotografoval:</td><td><select name="fotografoval_n" size="1">
+        <option value="True">True
+        <option value="False">False
+        </select></td></tr></td></tr>
+    <tr><td>Číslo nové:</td><td><input type="text" name="cislo_nove_n"></td></tr>
+
+    </table>
+
+<p></p>
+<td><a href="/add_data"><button type="button" class="btn btn-default">Přidat</button></a></td>
+<p></p>
+
+{% endblock %}
