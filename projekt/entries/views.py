@@ -20,14 +20,14 @@ def edit_data(request,id):
 def add(request):
     return render(request, 'entries/add.html')
 def add_data(request):
-    jmeno=request.POST.get("jmeno_n")
-    vyzkum=request.POST.get("vyzkum_n")
-    teren=request.POST.get("teren_n")
-    technicky=request.POST.get("technicky_n")
-    kreslil=request.POST.get("kreslil_n")
-    fotografoval=request.POST.get("fotografoval_n")
-    cislo_nove=request.POST.get("cislo_nove_n")
-    obj=Iautorsky(jmeno=jmeno,vyzkum=vyzkum,teren=teren,technicky=technicky,kreslil=kreslil,fotografoval=fotografoval,cislo_nove=cislo_nove)
+    jmeno1=request.POST.get("jmeno_n")
+    vyzkum1=request.POST.get("vyzkum_n")
+    teren1=request.POST.get("teren_n")
+    technicky1=request.POST.get("technicky_n")
+    kreslil1=request.POST.get("kreslil_n")
+    fotografoval1=request.POST.get("fotografoval_n")
+    cislo_nove1=request.POST.get("cislo_nove_n")
+    obj=Iautorsky(jmeno=jmeno1,vyzkum=vyzkum1,teren=teren1,technicky=technicky1,kreslil=kreslil1,fotografoval=fotografoval1,cislo_nove=cislo_nove1)
     obj.save()
     return render(request, 'entries/index.html')
 
