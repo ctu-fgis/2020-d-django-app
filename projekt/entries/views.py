@@ -22,7 +22,6 @@ def edit_data(request,id):
 
 def add(request):
     return render(request, 'entries/add.html')
-    
 def add_data(request):
     jmeno1=request.POST.get("jmeno_n")
     vyzkum1=request.POST.get("vyzkum_n")
