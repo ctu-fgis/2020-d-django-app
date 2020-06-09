@@ -9,8 +9,8 @@ urlpatterns = [
     path(r'^login/$', views.login, name='login'),
     path(r'^data/$', views.data, name='data'),
     path(r'delete_autor/<int:id>', views.delete_autor, name='delete_autor'),
-    path(r'edit/<int:id>', views.edit, name='edit'),    
-    path(r'edit_data/<int:id>', views.edit_data, name='edit_data'),
+    path(r'edit/<int:id>', views.edit, name='edit'),
+    path(r'edit_data/<int:id>',views.edit_data,name='edit_data'),
     path(r'domu', views.domu, name='domu'),
 
 

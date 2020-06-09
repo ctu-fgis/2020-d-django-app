@@ -25,7 +25,7 @@
 <td>{{ Iautorsky.cislo_nove }}</td>
 <td>{{ Iautorsky.id }}</td>
 
-<td><a href="/edit/{{ Iautorsky.id }}"><button type="button" class="btn btn-default">Edit</button></a></td>
+<td><a href="{% url 'edit' id=Iautorsky.id %}"><button type="button"  class="btn btn-default" >Edit</button></a></td>
 <td><a href="/delete_autor/{{ Iautorsky.id }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
 
 </tr>

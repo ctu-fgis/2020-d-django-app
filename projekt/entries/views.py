@@ -3,18 +3,20 @@ from .models import Iautorsky
 
 def index(request):
     return render(request, 'entries/index.html')
+
 def edit(request,id):
-    return render(request, 'entries/edit.html') 
+    return render(request, 'entries/edit.html')
+
 def edit_data(request,id):
-    obj=Iautorsky.objects.all(id=id)
-    jmeno=request.POST.get("jmeno_e")
-    vyzkum=request.POST.get("vyzkum_e")
-    teren=request.POST.get("teren_e")
-    technicky=request.POST.get("technicky_e")
-    kreslil=request.POST.get("kreslil_e")
-    fotografoval=request.POST.get("fotografoval_e")
-    cislo_nove=request.POST.get("cislo_nove_e")
-    obj=Iautorsky(jmeno=jmeno,vyzkum=vyzkum,teren=teren,technicky=technicky,kreslil=kreslil,fotografoval=fotografoval,cislo_nove=cislo_nove)
+    obj = Iautorsky.objects.get(id=id)
+    jmeno1=request.POST.get("jmeno_e")
+    vyzkum1=request.POST.get("vyzkum_e")
+    teren1=request.POST.get("teren_e")
+    technicky1=request.POST.get("technicky_n")
+    kreslil1=request.POST.get("kreslil_n")
+    fotografoval1=request.POST.get("fotografoval_n")
+    cislo_nove1=request.POST.get("cislo_nove_n")
+    obj=Iautorsky(id=id,jmeno=jmeno1,vyzkum=vyzkum1,teren=teren1,technicky=technicky1,kreslil=kreslil1,fotografoval=fotografoval1,cislo_nove=cislo_nove1)
     obj.save()
     return render(request, 'entries/index.html')
 

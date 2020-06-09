@@ -7,7 +7,8 @@ urlpatterns = [
     url(r'', include('entries.urls')),
     url(r'^data/',include('entries.urls')),
     url(r'^login/', include('entries.urls')),
-    url(r'^edit_data/', include('entries.urls')),
+ 
+
     path('accounts/', include('django.contrib.auth.urls')),
 
 

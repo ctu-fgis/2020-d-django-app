@@ -1,10 +1,10 @@
 
 {% block body %}
-Editovat položku:
-<form action="/edit_data/" method='POST'>
+Přidat položku do databáze:
+<form action="/edit_data/{{iautorsky.id}}" method='POST'>
     {% csrf_token %}
         <table>
-            <tr><td>Jméno autora:</td><td><input type="text" value="neco" name="jmeno_e"></td></tr>
+            <tr><td>Jméno autora:</td><td><input type="text" name="jmeno_e"></td></tr>
             <tr><td>Výzkum:</td><td><select name="vyzkum_e" size="1">
                 <option value="True">True
                 <option value="False">False
