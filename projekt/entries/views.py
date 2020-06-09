@@ -6,6 +6,7 @@ def index(request):
 def edit(request,id):
     return render(request, 'entries/edit.html') 
 def edit_data(request,id):
+    obj=Iautorsky.objects.all(id=id)
     jmeno=request.POST.get("jmeno_e")
     vyzkum=request.POST.get("vyzkum_e")
     teren=request.POST.get("teren_e")
@@ -27,8 +28,8 @@ def add_data(request):
     kreslil1=request.POST.get("kreslil_n")
     fotografoval1=request.POST.get("fotografoval_n")
     cislo_nove1=request.POST.get("cislo_nove_n")
-    obj=Iautorsky(jmeno=jmeno1,vyzkum=vyzkum1,teren=teren1,technicky=technicky1,kreslil=kreslil1,fotografoval=fotografoval1,cislo_nove=cislo_nove1)
-    obj.save()
+    obj1=Iautorsky(jmeno=jmeno1,vyzkum=vyzkum1,teren=teren1,technicky=technicky1,kreslil=kreslil1,fotografoval=fotografoval1,cislo_nove=cislo_nove1)
+    obj1.save()
     return render(request, 'entries/index.html')
 
 def data(request):
